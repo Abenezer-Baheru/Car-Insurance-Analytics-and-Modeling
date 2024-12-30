@@ -1,4 +1,4 @@
-# Project Title
+# Car-Insurance-Analytics-and-Modeling
 
 ## Overview
 This project involves analyzing and visualizing insurance data to identify trends, calculate losses and profits, and generate insightful visualizations. The project is divided into several tasks, including data summarization, univariate analysis, bivariate/multivariate analysis, data comparison, and visualizations.
@@ -75,5 +75,3 @@ Contributions are welcome! Please follow these steps to contribute:
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 ```
-
-Feel free to customize the README script as needed and let me know if you need any further assistance! 🚀📊
