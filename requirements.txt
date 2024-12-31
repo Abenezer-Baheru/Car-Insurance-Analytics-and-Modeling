@@ -7,3 +7,5 @@ scipy
 plotly
 nbformat>=4.2.0
 tabulate
+xgboost
+shap
