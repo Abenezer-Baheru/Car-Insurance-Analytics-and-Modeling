@@ -1,3 +1,5 @@
+# AB_hypothesis_testing.py
+
 import pandas as pd
 import scipy.stats as stats
 
@@ -45,6 +47,8 @@ class ABHypothesisTesting:
         try:
             group_a_data = self.data[self.data[group_a] == 'A'][target]
             group_b_data = self.data[self.data[group_b] == 'B'][target]
+            if len(group_a_data) < 2 or len(group_b_data) < 2:
+                raise ValueError("Sample size too small for t-test")
             t_stat, p_value = stats.ttest_ind(group_a_data, group_b_data)
             return p_value
         except Exception as e:
