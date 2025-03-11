@@ -8,23 +8,24 @@ This project involves analyzing and visualizing insurance data to identify trend
 - [Table of Contents](#table-of-contents)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Data Summarization](#data-summarization)
-- [Univariate Analysis](#univariate-analysis)
-- [Bivariate/Multivariate Analysis](#bivariate-multivariate-analysis)
-- [Data Comparison](#data-comparison)
+- [Data Preprocessing](#data-preprocessing)
+- [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
+- [Hypothesis Testing](#hypothesis-testing)
+- [Predictive Modeling](#predictive-modeling)
 - [Visualizations](#visualizations)
 - [Unit Tests](#unit-tests)
 - [Contributing](#contributing)
+- [Author](#author)
 - [License](#license)
 
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/your-repo.git
+   git clone https://github.com/Abenezer-Baheru/Car-Insurance-Analytics-and-Modeling.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd your-repo
+   cd Car-Insurance-Analytics-and-Modeling
    ```
 3. Install the required dependencies:
    ```bash
@@ -32,31 +33,62 @@ This project involves analyzing and visualizing insurance data to identify trend
    ```
 
 ## Usage
-1. Run the main script to perform data analysis and generate visualizations:
+1. Run the scripts in sequence to perform data analysis, hypothesis testing, and modeling:
    ```bash
-   python main.py
+   python preprocess_data.py  # Preprocess the dataset
+   python eda.py              # Perform exploratory data analysis
+   python hypothesis_test.py  # Conduct hypothesis testing
+   python model_training.py   # Train predictive models
    ```
 
-## Data Summarization
-The data summarization step involves loading the data, checking for missing values, removing duplicates, and converting columns to appropriate data types. It also includes calculating descriptive statistics and visualizing the distribution of numerical columns.
+## Data Preprocessing
+The data preprocessing step includes:
+- Handling missing values (imputation, removal).
+- Converting columns to appropriate data types.
+- Cleaning data for inconsistencies (e.g., trimming white spaces in text).
+- Feature engineering to create useful predictors for modeling.
 
-## Univariate Analysis
-The univariate analysis step involves plotting histograms and bar charts for numerical and categorical columns, respectively. This helps in understanding the distribution of individual columns.
+## Exploratory Data Analysis (EDA)
+EDA involves:
+- Univariate Analysis: Plotting histograms, bar charts, and boxplots for numerical and categorical data.
+- Bivariate/Multivariate Analysis: Calculating correlations, visualizing scatter plots, and analyzing geographic trends.
+- Outlier Detection: Using boxplots to identify and handle outliers.
+- Summary Statistics: Providing descriptive statistics for key columns.
 
-## Bivariate/Multivariate Analysis
-The bivariate/multivariate analysis step involves plotting scatter plots and calculating correlation matrices to understand the relationships between different columns. It also includes visualizing monthly changes in `TotalPremium` and `TotalClaims`.
+## Hypothesis Testing
+This phase addresses business-specific hypotheses to evaluate:
+- Risk differences by geography and demographics.
+- Profit margin differences across client categories.
+- Statistical relationships between features, using techniques such as t-tests and chi-squared tests.
 
-## Data Comparison
-The data comparison step involves calculating monthly changes for `TotalPremium` and `TotalClaims`, and visualizing trends for different fields such as `CoverType` and `make` using bar charts and line plots.
+## Predictive Modeling
+Predictive models are built to:
+- Analyze historical claims data.
+- Predict premiums and total claims.
+- Models used include:
+  - Linear Regression
+  - Random Forest
+  - Gradient Boosting Machines (XGBoost)
+  - Logistic Regression
+  - Neural Networks (MLP, RNN/LSTM)
+- Model performance is evaluated using metrics like RMSE, accuracy, and feature importance analysis.
 
 ## Visualizations
-The visualizations step involves generating bar plots for total profit/loss, frequency percentage, and average profit/loss per frequency for different columns. It also includes defining a function to calculate losses and profits for a given column and show top N results.
+Visualizations play a crucial role in deriving insights. Examples include:
+- Bar plots for profit/loss by cover type or make.
+- Heatmaps for correlations between features.
+- Line plots to analyze monthly trends in premiums and claims.
+- Scatter plots for client segmentation.
 
 ## Unit Tests
-The unit tests step involves testing various functions and data processing steps using the `unittest` framework. It includes tests for data types, difference calculation, the `calculate_losses` function, missing values, and negative values removal.
+Unit testing ensures the reliability of the analysis and modeling steps. Tests include:
+- Verifying data types and transformations.
+- Testing imputation functions for missing values.
+- Validating the accuracy of profit/loss calculations.
+- Ensuring proper handling of categorical encoding and scaling.
 
 ## Contributing
-Contributions are welcome! Please follow these steps to contribute:
+Contributions are welcome! Here's how you can contribute:
 1. Fork the repository.
 2. Create a new branch:
    ```bash
@@ -64,14 +96,17 @@ Contributions are welcome! Please follow these steps to contribute:
    ```
 3. Make your changes and commit them:
    ```bash
-   git commit -m "Add new feature"
+   git commit -m "Describe your feature"
    ```
 4. Push to the branch:
    ```bash
    git push origin feature-branch
    ```
-5. Create a pull request.
+5. Open a pull request.
+
+## Author
+**Abenezer Baheru**  
+GitHub: [Abenezer Baheru](https://github.com/Abenezer-Baheru/Car-Insurance-Analytics-and-Modeling)
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-```
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
