@@ -18,6 +18,31 @@ This project involves analyzing and visualizing insurance data to identify trend
 - [Author](#author)
 - [License](#license)
 
+## Project Structure
+
+Car-Insurance-Analytics-and-Modeling/
+├── data/                     # Raw and processed data files
+├── notebooks/                # Jupyter notebooks for data exploration and analysis
+│   ├── __init__.py
+│   ├── data_preprocessing.ipynb   # Notebook for data preprocessing
+│   ├── EDA.ipynb                  # Notebook for exploratory data analysis
+│   ├── AB_hypothesis_testing.py   # Notebook for A/B hypothesis testing
+│   ├── README.md                  # Notebook-specific documentation
+│   ├── statistical_modeling.py    # Notebook for statistical modeling
+├── scripts/                  # Python scripts for data preprocessing, analysis, and modeling
+│   ├── __init__.py
+│   ├── data_preprocessing.py       # Script for data preprocessing
+│   ├── AB_hypothesis_testing.py    # Script for hypothesis testing
+│   ├── statistical_modeling.py     # Script for predictive modeling
+├── tests/                    # Unit test scripts for validation
+│   ├── test_AB_hypothesis_testing.py 
+│   ├── test_data_preprocessing.py  # Unit tests for data preprocessing
+│   ├── test_statistical_modeling.py # Unit tests for statistical modeling
+├── logs/                     # Logs generated during data processing
+├── requirements.txt          # Python package dependencies
+├── README.md                 # Project documentation
+├── LICENSE                   # License file
+
 ## Installation
 1. Clone the repository:
    ```bash
